@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+    img{
+      width:100px;
+    }
+    .responsive {
+      width: 100%;
+      height: auto;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body{
+        background: #454545;
+        min-height: 100vh;
+    }
+    .wrapper{
+        max-width: 850px;
+        background-color: #fff;
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        margin: 50px auto;
+        box-shadow: 0 8px 20px 0px #1f1f1f1a;
+        overflow: hidden;
+    }
+    .wrapper .form{
+        padding: 20px 40px;
+        position: relative;
+        width: 100%;
+    }
+    .wrapper .form h2{
+        color: #3786bd;
+    }
+    .wrapper .form label{
+        font-weight: 600;
+        font-size: 15px;
+        color: #666;
+        display: block;
+        margin-bottom: 8px;
+    }
+    .wrapper .form .input-field{
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid #e5e5e5;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        outline: none;
+        color: #333;
+    }
+    .wrapper .form .input-field:focus{
+        border: 1px solid #31a031;
+    }
+    .wrapper .option {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        font-weight: 900;
+        cursor: pointer;
+        user-select: none
+    }
+    .wrapper .option input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0
+    }
+    .wrapper .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        border-radius: 2px
+    }
+    .wrapper .option:hover input~.checkmark {
+        background-color: #f1f1f1
+    }
+    .wrapper .option input:checked~.checkmark {
+        border: 2px solid #e5e5e5;
+        background-color: #fff;
+        transition: 300ms ease-in-out all
+    }
+    .wrapper .checkmark:after {
+        content: "\2713";
+        position: absolute;
+        display: none;
+        color: #3786bd;
+        font-size: 1rem;
+    }
+    .wrapper .option input:checked~.checkmark:after {
+        display: block
+    }
+    .wrapper .option .checkmark:after {
+        left: 2px;
+        top: -4px;
+        width: 5px;
+        height: 10px
+    }
+    .wrapper .register{
+        padding: 12px;
+        background: #3786bd;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        width: 130px;
+        border: none;
+        margin: 6px 0 50px 0px;
+        cursor: pointer;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .wrapper .register:hover{
+        background-color: #454545;
+    }
+    .wrapper a{
+        text-decoration: none;
+    }
+
+    </style>
+
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a href=""><img class="logo" src="img/logo.png">
+      <a class="navbar-brand" href="#"><b>CROWN BICYCLES</b></a>
+
+</div>
+    <ul class="nav navbar-nav">
+      <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/home.html">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/mountain.html">Mountain Bicycles</a></li>
+                  <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/bmx.html">BMX Bicycles</a></li>
+                  <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/electric.html">Electric Bicycles</a></li>
+                  <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/cyclocross.html">Cyclocross Bicycles</a></li>
+                  <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/folding.html">Folding Bicycles</a></li>
+                  <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/accessories.html">Accessories</a></li>
+                </ul>
+      </li>
+      <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/aboutus.html">About Us</a></li>
+      <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/contactus.html">Contact Us</a></li>
+      <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/locateus.html">Locate Us</a></li>
+    </ul>
+
+
+  <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="file:///D:/HND%2054/2.Second%20Sem/wdd/Assignment/WDD%20Website/login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+
+</nav>
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+            <form class="form">
+                <h2 class="text-uppercase">Sign Up Here</h2>
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <label>First Name</label>
+                        <input type="text" name="first_name" id="first_name" class="input-field">
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label>Last Name</label>
+                        <input type="text" name="last_name" id="last_name" class="input-field">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label>Your Email</label>
+                    <input type="email" class="input-field" name="email" required>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <label>Password</label>
+                        <input type="password" name="pwd" id="pwd" class="input-field">
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label>Re Type Password</label>
+                        <input type="password" name="cpwd" id="cpwd" class="input-field">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="option">I agree to the <a href="#">Terms and Conditions</a>
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="form-field">
+                    <input type="submit" value="Register" class="register" name="register">
+                </div>
+            </form>
+        </div>
+  </body>
+</html>
